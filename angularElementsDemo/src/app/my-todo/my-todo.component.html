@@ -1,0 +1,21 @@
+<section>
+    <header>
+        <h3>My Todos</h3>
+        <input placeholder="Type in a TODO" autofocus="" [(ngModel)]="newTodo" (keyup.enter)="addMyTodo()">
+    </header>
+    <br />
+    <section *ngIf="myTodos.length > 0">
+        <ul>
+            <li *ngFor="let todo of myTodos">
+                <div>
+                    <label>{{todo}}</label>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer *ngIf="myTodos.length > 0">
+        <span>
+            <strong>{{myTodos.length}}</strong> {{myTodos.length == 1 ? 'item' : 'items'}} left
+        </span>
+    </footer>
+</section>
