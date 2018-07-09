@@ -1,10 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-my-todo",
   templateUrl: "./my-todo.component.html",
-  styleUrls: ["./my-todo.component.css"]
+  styleUrls: ["./my-todo.component.css"],
+  encapsulation: ViewEncapsulation.Native
 })
 export class MyTodoComponent implements OnInit {
   myTodos: string[] = [];
