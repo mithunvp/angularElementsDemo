@@ -1,0 +1,16 @@
+<section>
+    <header>
+        <h2>Search Github Repository</h2>
+        <input placeholder="Type in a username" autofocus="" [(ngModel)]="userName" (keyup.enter)="searchUserRepos()">
+    </header>
+    <br />
+    <section>
+        <ul>
+            <li *ngFor="let repo of gitRepos">
+                <div>
+                    <label>{{repo.name}} -- {{repo.starsCount}}</label>                    
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>
