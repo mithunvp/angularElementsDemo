@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "publish-for-deploy": "ng build --prod --output-hashing=none && dotnet publish -c Release",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
